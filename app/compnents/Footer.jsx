@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
       <footer className="ml-[30%]">
-        Copyright 2021 Ninja List
+        Copyright 2023 daniel-js0
       </footer>
     );
   }

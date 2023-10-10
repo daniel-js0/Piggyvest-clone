@@ -1,5 +1,5 @@
-import Footer from './comp/Footer'
-import Navbar from './comp/Navbar'
+import Footer from './compnents/Footer'
+import Navbar from './compnents/Navbar'
 import './globals.css'
 import { Rubik } from 'next/font/google'
 
