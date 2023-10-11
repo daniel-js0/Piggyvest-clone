@@ -27,11 +27,11 @@ const Footer = () => {
 
             <a href="https://www.cio.com/article/401314/how-investment-and-savings-platform-piggyvest-is-changing-nigerias-youth-culture.html" target="_blank" rel="noreferrer" >
             <img className="mt-6 ml-14 lg:ml-0 md:mt-6 lg:mt-0       max-[373px]:mx-auto max-[373px]:-mt-1" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/cio_6806ee3afd/cio_6806ee3afd.svg" alt="brand"/></a>
-          </div>
+        </div>
 
 
 
-          <div className=" lg:flex lg:w-[87%] lg:mx-auto mt-20 lg:h-60  border-b border-gray-300
+        <div className=" lg:flex lg:w-[87%] lg:mx-auto mt-20 lg:h-60  border-b border-gray-300
                             flex max-[1023px]:flex-col  max-[1023px]:w-[87%] max-[1023px]:mx-auto">
             <div className="-mt-8">
                 <Link href="/">
@@ -42,9 +42,9 @@ const Footer = () => {
                 </Link>
                 <Image
                  src={Logo} 
-                 className="xl:ml-[10%] h-24"
+                 className="xl:ml-[10%] h-24 w-32"
                  alt="NDPR audit" 
-                 width={110} 
+                //  width={110} 
                  quality={100}
                  placeholder='blur' 
                  />
@@ -111,7 +111,7 @@ const Footer = () => {
                   <p className=" lg:ms-auto text-gray-500 mt-2 text-sm">+234 700 933 933 933</p>
                </div>
             </div>
-          </div>
+        </div>
 
           <div className="mb-24 w-[87%] mx-auto mt-8">
                   <p className=" text-xs text-gray-400 tracking-tight">Piggyvest (formerly piggybank.ng) is the leading online savings & investing platform in Nigeria. For over 7 years, our customers have <br />
