@@ -4,7 +4,7 @@ import Logo from './audit.png'
 
 const Footer = () => {
     return (
-      <footer className="mx-auto">
+      <footer className="mx-auto bg-gray-100 mt-28">
 
          <div className="flex justify-center">
           <h1 className="lg:text-3xl text-2xl leading-4 font-extrabold text-gray-900">As featured in</h1>
@@ -113,7 +113,7 @@ const Footer = () => {
             </div>
         </div>
 
-          <div className="mb-24 w-[87%] mx-auto mt-8">
+          <div className="pb-24 w-[87%] mx-auto mt-8">
                   <p className=" text-xs text-gray-400 tracking-tight">Piggyvest (formerly piggybank.ng) is the leading online savings & investing platform in Nigeria. For over 7 years, our customers have <br />
                     saved and invested billions of Naira that they would normally be tempted to spend.</p>
                   <p className="mt-6 text-xs text-gray-400 tracking-tight">PV Capital Limited is a fund manager duly licensed by the Securities and Exchange <br />
