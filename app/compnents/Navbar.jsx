@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Navbar = () => {
   return (
     
-    <nav className='fixed top-0 flex flex-row justify-between gap-14 h-20 w-screen bg-gray-100
+    <nav className='z-10 fixed top-0 flex flex-row justify-between gap-14 h-20 w-screen bg-gray-100
                     md:h-24 md:gap-20'>
         <div className='flex flex-row justify-start gap-14 ml-5 md:ml-[2%] xl:ml-[8%]'>
               <Link href="/">
