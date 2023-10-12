@@ -1,9 +1,11 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import Navbar from "./compnents/Navbar";
 
 export default function Home() {
               const [hover, setHover] = useState("");
-        
+              const [scroll, setScroll ] = useState(false);
+
               
               function handleHover(tab){
                 setHover(tab);   
@@ -13,9 +15,31 @@ export default function Home() {
                 setHover(tab);
               }
 
+              useEffect(() => {
+                const handleScroll = () => {
+                  const scrollPosition = window.scrollY;
+            
+                  const threshold = 100; 
+            
+                  if (scrollPosition > threshold) {
+                    setScroll(true);
+                  } else {
+                    setScroll(false);
+                  }
+                };
+            
+                window.addEventListener('scroll', handleScroll);
+            
+                return () => {
+                  window.removeEventListener('scroll', handleScroll);
+                };
+              }, []);
+            
+
   return (
         
     <main className="">
+       <Navbar scroll={scroll}/>
        <div className='mt-52 min-[1023px]:flex '>
            <div className='w-screen md:w-[70%] min-[1023px]:w-[39%] md:mx-auto '>
                <h1 className='text-center px-2 text-5xl font-bold 
@@ -74,7 +98,8 @@ export default function Home() {
               </div>
           </div>
        </div>
-       
+
+       {/* grid */}
        <div className="mt-32 w-screen min-[1023px]:grid min-[1023px]:grid-cols-2 ">
               <div className="w-[80%] mx-auto mb-5 md:w-[50%] md:mx-auto min-[1023px]:w-[70%] min-[1023px]:mt-24">
                   <h1 className="text-center text-3xl font-bold text-gray-900 md:text-5xl md:leading-normal">5 ways to build <br className="max-[1122px]:hidden"/> your savings</h1>
@@ -96,7 +121,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'blue' ? 'text-gray-200' : 'text-gray-900'}`}>Piggybank</p>
                   </div>
                   <div className={`absolute ${hover === 'blue' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-40 min-[1023px]:-bottom-60 delay-100 duration-700'}`}>
-                  <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_11_a9e52d90bf/i_Phone_14_11_a9e52d90bf.avif"/>
+                   <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_11_a9e52d90bf/i_Phone_14_11_a9e52d90bf.avif"/>
                   </div>
               </div>  
 
@@ -114,7 +139,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'sky' ? 'text-gray-200' : 'text-gray-900'}`}>Safelock</p>
                   </div>
                   <div className={`absolute ${hover === 'sky' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-40 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                  <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_22_c3fb491e57/i_Phone_14_22_c3fb491e57.avif"/>
+                   <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_22_c3fb491e57/i_Phone_14_22_c3fb491e57.avif"/>
                   </div>
               </div> 
 
@@ -132,7 +157,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'green' ? 'text-gray-200' : 'text-gray-900'}`}>Target Savings</p>
                   </div>
                   <div className={`absolute ${hover === 'green' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                  <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphonw_a485f92ad1/iphonw_a485f92ad1.avif"/>
+                   <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphonw_a485f92ad1/iphonw_a485f92ad1.avif"/>
                   </div>
               </div> 
 
@@ -150,7 +175,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'pink' ? 'text-gray-200' : 'text-gray-900'}`}>Flex Naira</p>
                   </div>
                   <div className={`absolute ${hover === 'pink' ? 'end-5 bottom-0 delay-100 duration-700 ' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                  <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_b4eaa3708a/i_Phone_14_b4eaa3708a.avif"/>
+                   <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_b4eaa3708a/i_Phone_14_b4eaa3708a.avif"/>
                   </div>
               </div>
 
@@ -168,11 +193,35 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'gray' ? 'text-gray-200' : 'text-gray-900'}`}>Flex Dollar</p>
                   </div>
                   <div className={`absolute ${hover === 'gray' ? 'end-5 bottom-0 delay-100 duration-700 ' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                  <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphone12_5d07b2941e/iphone12_5d07b2941e.avif"/>
+                   <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphone12_5d07b2941e/iphone12_5d07b2941e.avif"/>
                   </div>
               </div>
        </div>
-    </main>
-     
+
+       <div className="w-screen h-[60rem] bg-white mt-28 ">
+       
+             <h1 className="pt-16 text-center text-3xl min-[580px]:text-5xl font-bold text-gray-900 px-7">Diverse ways to Invest</h1>
+             <p className=" text-center mt-3 text-lg min-[580px]:text-2xl text-gray-500 px-12">Grow your money and invest for your future confidently.</p>  
+      
+          <div  className={`mt-16 w-[90%] md:w-[80%] min-[1023px]:w-[90%] xl:w-[85%] xl:h-[32rem]  h-[40rem] bg-violet-700 mx-auto rounded-3xl relative overflow-hidden cursor-pointer `}>
+                  <div className="mt-16 ">
+                      <h1 className={`text-center text-3xl font-bold px-6 text-gray-100 
+                             min-[1023px]:text-4xl min-[1023px]:text-start min-[1023px]:px-16`}>Earn Up to 25% returns</h1>
+                      <p className={`text-center text-lg mt-5 px-4 md:px-14 text-gray-300
+                            min-[1023px]:text-start min-[1023px]:text-2xl min-[1023px]:px-16 xl:text-xl xl:mt-8`} >Invest securely and confidently <br className="max-[1102px]:hidden"/> on the go. Grow your money <br className="max-[1102px]:hidden"/> confidently by investing in pre- <br className="max-[1102px]:hidden"/>vetted investment <br className="max-[1102px]:hidden"/>opportunities.</p>
+                  </div>
+                  <div className="flex justify-center mt-5  text-gray-100 lg:absolute lg:bottom-10 lg:px-8 ">
+                      <svg className={`h-7 w-6 -mt-1 xl:w-7 `} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16"><path fillRule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/></svg>
+                      <p className={`ml-1 font-bold xl:text-lg`}>Learn about Investments</p>
+                  </div>
+                   <div className={`absolute w-[100%] h-[50%] md:h-[60%] max-[281px]:h-[40%] xl:h-[88%] flex justify-center xl:justify-end  bottom-0`}>
+                   <img className=" h-[100%] w-[85%] md:w-[60%] min-[1023px]:w-[45%] xl:w-[36%] xl:mr-12" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphone_Invest_d524b30868/iphone_Invest_d524b30868.avif" />
+                  </div>
+          </div>  
+       </div>
+       <div className="w-screen h-60 bg-red-500">
+         <video tabindex="-1" className="h-32 w-28" webkit-playsinline="" playsinline="" controlslist="nodownload" src="blob:https://www.youtube.com/f31412c5-ece6-4268-bb26-49ce1050d0dd"/>
+       </div>
+    </main> 
   )
 }

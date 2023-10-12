@@ -1,9 +1,5 @@
 import Footer from './compnents/Footer'
-import Navbar from './compnents/Navbar'
 import './globals.css'
-import { Rubik } from 'next/font/google'
-
-const rubik = Rubik({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Piggyvestclone',
@@ -13,8 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`rubik.className bg-slate-200 `}>
-        <Navbar/>
+      <body className={` bg-slate-200 `}>
         {children}
         <Footer/>
         </body>

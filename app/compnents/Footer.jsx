@@ -4,8 +4,8 @@ import Logo from './audit.png'
 
 const Footer = () => {
     return (
-      <footer className="mx-auto bg-gray-100 mt-28">
-
+      <footer className="mx-auto bg-gray-50 mt-28">
+        
          <div className="flex justify-center">
           <h1 className="lg:text-3xl text-2xl leading-4 font-extrabold text-gray-900">As featured in</h1>
          </div>

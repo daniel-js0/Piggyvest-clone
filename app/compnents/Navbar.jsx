@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
-const Navbar = () => {
+const Navbar = ({scroll}) => {
   return (
     
-    <nav className='z-10 fixed top-0 flex flex-row justify-between gap-14 h-20 w-screen bg-gray-100
-                    md:h-24 md:gap-20'>
+    <nav className={`z-10 fixed top-0 flex flex-row justify-between gap-14 h-20 w-screen 
+                    md:h-24 md:gap-20 ${scroll ? ' bg-gray-50 shadow-xl' : 'bg-slate-200'}`}>
         <div className='flex flex-row justify-start gap-14 ml-5 md:ml-[2%] xl:ml-[8%]'>
               <Link href="/">
                 <svg width="192" height="37" viewBox="0 0 192 37" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ const Navbar = () => {
 
               <div className='lg:flex flex-row  justify-evenly gap-6 mt-10 hidden'>
                   <Link href="/"><h2 className='text-gray-600 font-semibold' >Save</h2></Link>
-                  <Link href="/"><h2 className='text-gray-600 font-semibold' >Invest</h2></Link>
+                  <Link href="/invest"><h2 className='text-gray-600 font-semibold' >Invest</h2></Link>
                   <Link href="/"><h2 className='text-gray-600 font-semibold' >Stories</h2></Link>
                   <Link href="/"><h2 className='text-gray-600 font-semibold' >FAQs</h2></Link>
                   <Link href="/"><h2 className='text-gray-600 font-semibold' >Resources</h2></Link> 
