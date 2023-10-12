@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import Navbar from "./compnents/Navbar";
+import YouTube from 'react-youtube';
 
 export default function Home() {
               const [hover, setHover] = useState("");
@@ -34,7 +35,18 @@ export default function Home() {
                   window.removeEventListener('scroll', handleScroll);
                 };
               }, []);
-            
+
+              const opts = {
+                height: '390',
+                width: '640',
+                playerVars: {
+                  autoplay: 0,
+                },
+              };
+               const videoId = "_HcNchGk_A0"
+              
+
+           
 
   return (
         
@@ -50,18 +62,18 @@ export default function Home() {
                <div className="flex justify-center mt-7 w-[90%]  h-20  mx-auto 
                           min-[1023px]:justify-start min-[1023px]:px-2">
                   <button className="flex my-auto bg-gray-800 h-14 w-44 rounded-xl
-                          hover:bg-black hover:-translate-y-2 hover:delay-300 duration-300">
+                          hover:bg-black hover:-translate-y-2 hover:delay-100 duration-700">
                       <img className="my-auto ml-3" src="https://storage.googleapis.com/new-abeg-avatar-dev/piggyvest-cms-staging/white_Apple_Logo_768cf7ce21/white_Apple_Logo_768cf7ce21.svg" alt="download-apple" width="18" height="22"/>
                       <p className="my-auto ml-2 font-bold text-gray-200">Get on Iphone</p>
                   </button>
                   <button className="flex my-auto  ml-4 bg-gray-800 h-14 w-48 rounded-xl
                            hover:bg-black hover:-translate-y-2 hover:delay-100 duration-700">
-                      <img className="my-auto ml-5"  src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/google_icon_9867fc9be6/google_icon_9867fc9be6.svg" alt="download-google" width="24" height="24"/>
+                      <img className="my-auto ml-3"  src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/google_icon_9867fc9be6/google_icon_9867fc9be6.svg" alt="download-google" width="24" height="24"/>
                       <p className="my-auto ml-1 font-bold  text-gray-200" >Get on Android</p>
                   </button>  
                </div>
            </div>
-
+ 
            <div className="w-[94%] mx-auto sm:mx-auto sm:w-[60%] lg:w-[45%] lg:scale-110 md:mx-auto mt-14 relative
                           min-[1023px]:-mt-12 xl:animate-bounce-slow">
               <div className="w-[85%] mt-5 mx-auto h-96 bg-[url('https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/pexels_ketut_subiyanto_4350099_bc5e069ebe/pexels_ketut_subiyanto_4350099_bc5e069ebe.avif')] bg-no-repeat bg-contain bg-center
@@ -198,6 +210,7 @@ export default function Home() {
               </div>
        </div>
 
+       {/* white bg */}
        <div className="w-screen h-[60rem] bg-white mt-28 ">
        
              <h1 className="pt-16 text-center text-3xl min-[580px]:text-5xl font-bold text-gray-900 px-7">Diverse ways to Invest</h1>
@@ -219,9 +232,43 @@ export default function Home() {
                   </div>
           </div>  
        </div>
-       <div className="w-screen h-60 bg-red-500">
-         <video tabindex="-1" className="h-32 w-28" webkit-playsinline="" playsinline="" controlslist="nodownload" src="blob:https://www.youtube.com/f31412c5-ece6-4268-bb26-49ce1050d0dd"/>
+
+       {/* youtube Video */}
+       <div>
+          <div>
+             <h1 className="pt-16 text-center text-3xl min-[580px]:text-5xl font-bold text-gray-900 px-7">Meet Our Saver of the Month</h1>
+             <p className=" text-center mt-3 text-lg min-[580px]:text-2xl text-gray-500 px-8 md:px-[20%]">Every month, we shine a spotlight on one saver, asking them about their savings culture and how piggyvest has helped them.</p>  
+          </div>
+          
+          <div className=" mt-14 lg:w-[47.42%] w-[75%] h-[24.4rem] bg-slate-200 mx-auto rounded-2xl overflow-hidden container">
+            <YouTube videoId={videoId} opts={opts}/>
+          </div>
        </div>
+
+       <div className="lg:flex lg:flex-row-reverse lg:justify-around mt-20">
+          <div className="lg:w-[50%] lg:h-64 lg:mt-32 lg:-ml-48">
+               <h1 className="pt-20 text-center text-3xl min-[580px]:text-4xl min-[580px]:px-12 font-bold text-gray-900 px-7
+              lg:text-start lg:px-0 lg:text-3xl">Join 4+ million people who save <br className="max-[1122px]:hidden"/>  and invest with us</h1> 
+               <div className="flex justify-center mt-7 w-[90%]  h-20  mx-auto lg:justify-start lg:ml-0">
+                  <button className="flex my-auto border border-gray-400 h-12 w-36 rounded-2xl
+                          hover:-translate-y-2 hover:delay-300 duration-300">
+                      <img className="my-auto ml-3" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/apple_icon_32ccc572ff/apple_icon_32ccc572ff.svg" alt="download-apple" width="16" height="20"/>
+                      <p className="my-auto ml-2 font-bold text-sm text-gray-800">Get on Iphone</p>
+                  </button>
+                  <button className="flex my-auto  ml-4 border border-gray-400 h-12 w-40 rounded-2xl
+                          hover:-translate-y-2 hover:delay-100 duration-700">
+                      <img className="my-auto ml-3"  src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/google_icon_9867fc9be6/google_icon_9867fc9be6.svg" alt="download-google" width="24" height="24"/>
+                      <p className="my-auto ml-1 font-bold text-sm  text-gray-800" >Get on Android</p>
+                  </button>  
+               </div>
+          </div>
+
+          <div className="mt-7 w-screen h-[26rem] relative overflow-hidden max-[1022px]:bg-gradient-to-b max-[1022px]:from-slate-200 max-[1022px]:to-white  flex justify-center
+                       lg:w-[60%] lg:h-[32rem] ">
+              <img className="w-[85%] md:w-[45%] h-[100%] absolute -bottom-10 lg:start-32 lg:w-[55%]" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/fallback_Img_2ccaefc7f6/fallback_Img_2ccaefc7f6.png" alt="" /> 
+          </div> 
+       </div>
+
     </main> 
   )
 }
