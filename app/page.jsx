@@ -3,7 +3,8 @@ import { useState } from "react"
 
 export default function Home() {
               const [hover, setHover] = useState("");
-
+        
+              
               function handleHover(tab){
                 setHover(tab);   
               }
@@ -47,11 +48,12 @@ export default function Home() {
                    <img className="w-36 h-14 absolute start-3 bottom-24" alt="card-img" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/Frame3_1_4b13e4d5cb/Frame3_1_4b13e4d5cb.avif" />
                    <img className="w-36 h-10 absolute end-4 bottom-32" alt="card-img" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/card4_1_8df24b3ed8/card4_1_8df24b3ed8.avif" />
                    <img className="w-36 h-12 absolute bottom-1 sm:-bottom-2 max-[361px]:bottom-9 start-1/3" alt="card-img" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/Frame5_1_4facd890fc/Frame5_1_4facd890fc.avif" />
-                </div>   
-              </div>
+                </div> 
 
-                  
+              </div> 
+                 
            </div>
+
        </div>
      
        <div className="mt-20 min-[990px]:flex min-[990px]:justify-start min-[990px]:ml-[6.8%] ">
@@ -61,9 +63,9 @@ export default function Home() {
           </svg>
 
           <div className="mt-10 w-screen "> 
-              <h1 className="text-center text-3xl font-bold text-gray-900 px-5 
+              <h1 className="text-center text-3xl font-bold text-gray-900 px-7 
                    min-[990px]:text-start">Your security is our priority</h1>
-              <p className="text-center mt-3 text-gray-500 px-5
+              <p className="text-center mt-3 text-gray-500 px-12
                   min-[990px]:text-start ">PiggyVest uses the highest level of Internet Security and it is secured by 256 bits SSL <br className="max-[990px]:hidden" /> security encryption to ensure that your information is comepletely protected from fraud.</p>
              
               <div className="flex justify-center mt-4 px-9 min-[990px]:justify-start min-[990px]:px-5">
@@ -73,93 +75,104 @@ export default function Home() {
           </div>
        </div>
        
-       <div className="mt-32 w-screen">
-              <div className="w-screen h-44 bg-slate-400 mb-5">
-                  <h1 className="text-center text-3xl font-bold text-gray-900">5 ways to build your savings</h1>
-                  <p className="text-center mt-3 text-gray-500 px-5 leading-relaxed">Earn 5%-15% when you save with any of these PiggyVest plans.</p>
+       <div className="mt-32 w-screen min-[1023px]:grid min-[1023px]:grid-cols-2 ">
+              <div className="w-[80%] mx-auto mb-5 md:w-[50%] md:mx-auto min-[1023px]:w-[70%] min-[1023px]:mt-24">
+                  <h1 className="text-center text-3xl font-bold text-gray-900 md:text-5xl md:leading-normal">5 ways to build <br className="max-[1122px]:hidden"/> your savings</h1>
+                  <p className="text-center mt-3 text-gray-500 px-5 leading-relaxed 
+                     min-[1023px]:text-3xl min-[1023px]:text-gray-900 min-[1023px]:font-thin">Earn 5%-15% when you save with any of these PiggyVest plans.</p>
               </div>
 
               <div onMouseEnter={() => handleHover('blue')} onMouseLeave={() => handleLeave('blue')} 
-                   className={`w-[90%] h-[27rem] mx-auto rounded-3xl relative overflow-hidden cursor-pointer 
-                   ${hover === 'blue' ? 'bg-blue-700' : 'bg-slate-50'}`}>
+                   className={`w-[90%] mt-12 h-[29rem] mx-auto rounded-3xl relative overflow-hidden cursor-pointer md:w-[68%] min-[1023px]:mt-0
+                    min-[1023px]:w-[85%] min-[1023px]:h-[30rem] min-[1023px]:mr-[12%] ${hover === 'blue' ? 'bg-blue-700' : 'bg-slate-50'}`}>
                   <div className="py-16 px-6">
-                      <h1 className={`text-center text-3xl font-bold  ${hover === 'blue' ? 'text-gray-200' : 'text-gray-900'}`}>Automated Savings</h1>
-                      <p className={`text-center mt-3 ${hover === 'blue' ? 'text-gray-50' : 'text-gray-500'}`} >Build a dedicated savings faster on your terms, automatically or manually.</p>
+                      <h1 className={`text-center text-3xl font-bold min-[1023px]:text-start min-[1023px]:text-4xl
+                        ${hover === 'blue' ? 'text-gray-200' : 'text-blue-900'}`}>Automated Savings</h1>
+                      <p className={`text-center mt-3 min-[1023px]:text-start min-[1023px]:text-2xl min-[1023px]:font-thin
+                        ${hover === 'blue' ? 'text-gray-50' : 'text-gray-500'}`} >Build a dedicated savings faster <br className="max-[1022px]:hidden"/> on your terms, automatically or  <br className="max-[1022px]:hidden"/>  manually.</p>
                   </div>
-                  <div className="flex justify-start mt-20 px-8 ">
-                      <svg className={`${hover === 'blue' ? 'text-gray-200' : 'text-gray-900'}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 10L20 15L15 20" stroke="#122231" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20" stroke="#122231" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                      <p className={`ml-1 font-bold ${hover ? 'text-gray-200' : 'text-gray-900'}`}>Piggybank</p>
+                  <div className="flex absolute bottom-10 px-8 ">
+                      <svg className={`h-6 w-6 -mt-1 ${hover === 'blue' ? 'text-gray-200' : 'text-gray-900'}`}  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16"><path fillRule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/></svg>
+                      <p className={`ml-1 font-bold ${hover === 'blue' ? 'text-gray-200' : 'text-gray-900'}`}>Piggybank</p>
                   </div>
-                  <div className={`absolute ${hover === 'blue' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-40 delay-100 duration-700'}`}>
-                  <img className="h-44 w-44" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_11_a9e52d90bf/i_Phone_14_11_a9e52d90bf.avif"/>
+                  <div className={`absolute ${hover === 'blue' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-40 min-[1023px]:-bottom-60 delay-100 duration-700'}`}>
+                  <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_11_a9e52d90bf/i_Phone_14_11_a9e52d90bf.avif"/>
                   </div>
               </div>  
 
               <div onMouseEnter={() => handleHover('sky')} onMouseLeave={() => handleLeave('sky')}
-                   className={`mt-10 w-[90%] h-[27rem] mx-auto rounded-3xl relative overflow-hidden cursor-pointer 
-                   ${hover === 'sky' ? 'bg-sky-500' : 'bg-slate-50'}`}>
+                   className={`mt-10 w-[90%] h-[29rem] mx-auto rounded-3xl relative overflow-hidden cursor-pointer md:w-[68%]
+                    min-[1023px]:w-[85%] min-[1023px]:h-[30rem] min-[1023px]:ml-[12%] ${hover === 'sky' ? 'bg-sky-500' : 'bg-slate-50'}`}>
                   <div className="py-16 px-6">
-                      <h1 className={`text-center text-3xl font-bold  ${hover === 'sky' ? 'text-gray-200' : 'text-gray-900'}`}>Fixed Savings</h1>
-                      <p className={`text-center mt-3 ${hover === 'sky' ? 'text-gray-50' : 'text-gray-500'}`}>Lock money away for a fixed duration without having access to it until maturity. It's like having a custom fixed deposit.</p>
+                      <h1 className={`text-center text-3xl font-bold  min-[1023px]:text-start min-[1023px]:text-4xl
+                      ${hover === 'sky' ? 'text-gray-200' : 'text-sky-500'}`}>Fixed Savings</h1>
+                      <p className={`text-center mt-3 min-[1023px]:text-start min-[1023px]:text-2xl min-[1023px]:font-thin
+                       ${hover === 'sky' ? 'text-gray-50' : 'text-gray-500'}`}>Lock money away for a fixed <br className="max-[1022px]:hidden"/> duration without having access <br className="max-[1022px]:hidden"/> to it until maturity. It's like having <br className="max-[1022px]:hidden"/> a custom fixed deposit.</p>
                   </div>
-                  <div className="flex justify-start mt-20 px-8 ">
-                      <svg className={`${hover === 'sky' ? 'text-gray-200' : 'text-gray-900'}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 10L20 15L15 20" stroke="#122231" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20" stroke="#122231" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  <div className="flex absolute bottom-10 px-8 ">
+                      <svg className={`h-6 w-6 -mt-1 ${hover === 'sky' ? 'text-gray-200' : 'text-gray-900'}`}  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16"><path fillRule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/></svg>
                       <p className={`ml-1 font-bold ${hover === 'sky' ? 'text-gray-200' : 'text-gray-900'}`}>Safelock</p>
                   </div>
-                  <div className={`absolute ${hover === 'sky' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-40 delay-100 duration-700'}`}>
-                  <img className="h-44 w-44" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_22_c3fb491e57/i_Phone_14_22_c3fb491e57.avif"/>
+                  <div className={`absolute ${hover === 'sky' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-40 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
+                  <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_22_c3fb491e57/i_Phone_14_22_c3fb491e57.avif"/>
                   </div>
               </div> 
 
               <div onMouseEnter={() => handleHover('green')} onMouseLeave={() => handleLeave('green')} 
-                   className={`mt-10 w-[90%] h-[27rem] mx-auto rounded-3xl relative overflow-hidden cursor-pointer 
-                   ${hover === 'green' ? 'bg-green-400' : 'bg-slate-50'}`}>
+                   className={`mt-10 w-[90%] h-[29rem] mx-auto rounded-3xl relative overflow-hidden cursor-pointer md:w-[68%]
+                    min-[1023px]:w-[85%] min-[1023px]:h-[30rem] min-[1023px]:mr-[12%] ${hover === 'green' ? 'bg-green-400' : 'bg-slate-50'}`}>
                   <div className="py-16 px-6">
-                      <h1 className={`text-center text-3xl font-bold  ${hover === 'green' ? 'text-gray-200' : 'text-gray-900'}`}>Goal-oriented Savings</h1>
-                      <p className={`text-center mt-3 ${hover === 'green' ? 'text-gray-50' : 'text-gray-500'}`}>Reach all your savings goals faster. Save towards multiple goals on your own or with a group.</p>
+                      <h1 className={`text-center text-3xl font-bold min-[1023px]:text-start min-[1023px]:text-4xl 
+                      ${hover === 'green' ? 'text-gray-200' : 'text-green-500'}`}>Goal-oriented Savings</h1>
+                      <p className={`text-center mt-3 min-[1023px]:text-start min-[1023px]:text-2xl min-[1023px]:font-thin
+                      ${hover === 'green' ? 'text-gray-50' : 'text-gray-500'}`}>Reach all your savings goals <br className="max-[1022px]:hidden"/>  faster. Save towards multiple <br className="max-[1022px]:hidden"/>  goals on your own or with a <br className="max-[1022px]:hidden"/>  group.</p>
                   </div>
-                  <div className="flex justify-start mt-20 px-8 ">
-                      <svg className={`${hover === 'green' ? 'text-gray-200' : 'text-gray-900'}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 10L20 15L15 20" stroke="#122231" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20" stroke="#122231" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  <div className="flex absolute bottom-10 px-8 ">
+                      <svg className={`h-6 w-6 -mt-1 ${hover === 'green' ? 'text-gray-200' : 'text-gray-900'}`}  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16"><path fillRule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/></svg>
                       <p className={`ml-1 font-bold ${hover === 'green' ? 'text-gray-200' : 'text-gray-900'}`}>Target Savings</p>
                   </div>
-                  <div className={`absolute ${hover === 'green' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-44 delay-100 duration-700'}`}>
-                  <img className="h-44 w-44" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphonw_a485f92ad1/iphonw_a485f92ad1.avif"/>
+                  <div className={`absolute ${hover === 'green' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
+                  <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphonw_a485f92ad1/iphonw_a485f92ad1.avif"/>
                   </div>
               </div> 
 
               <div onMouseEnter={() => handleHover('pink')} onMouseLeave={() => handleLeave('pink')} 
-                   className={`mt-10 w-[90%] h-[27rem] mx-auto rounded-3xl relative overflow-hidden cursor-pointer 
-                   ${hover === 'pink' ? 'bg-pink-400' : 'bg-slate-50'}`}>
+                   className={`mt-10 w-[90%] h-[29rem] mx-auto rounded-3xl relative overflow-hidden cursor-pointer md:w-[68%]
+                   min-[1023px]:w-[85%] min-[1023px]:h-[30rem] min-[1023px]:ml-[12%]  ${hover === 'pink' ? 'bg-pink-400' : 'bg-slate-50'}`}>
                   <div className="py-16 px-6">
-                      <h1 className={`text-center text-3xl font-bold  ${hover === 'pink' ? 'text-gray-200' : 'text-gray-900'}`}>Flex Naira</h1>
-                      <p className={`text-center mt-3 ${hover === 'pink' ? 'text-gray-50' : 'text-gray-500'}`}>Save, transfer, manage, organise, and withdraw your money at any time.</p>
+                      <h1 className={`text-center text-3xl font-bold min-[1023px]:text-start min-[1023px]:text-4xl  
+                      ${hover === 'pink' ? 'text-gray-200' : 'text-pink-600'}`}>Flex Naira</h1>
+                      <p className={`text-center mt-3 min-[1023px]:text-start min-[1023px]:text-2xl min-[1023px]:font-thin
+                      ${hover === 'pink' ? 'text-gray-50' : 'text-gray-500'}`}>Save, transfer, manage, <br className="max-[1022px]:hidden"/> organise, and withdraw your <br className="max-[1022px]:hidden"/> money at any time.</p>
                   </div>
-                  <div className="flex justify-start mt-20 px-8 ">
-                      <svg className={`${hover === 'pink' ? 'text-gray-200' : 'text-gray-900'}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 10L20 15L15 20" stroke="#122231" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20" stroke="#122231" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                      <p className={`ml-1 font-bold ${hover ? 'text-gray-200' : 'text-gray-900'}`}>Flex Naira</p>
+                  <div className="flex absolute bottom-10 px-8 ">
+                      <svg className={`h-6 w-6 -mt-1 ${hover === 'pink' ? 'text-gray-200' : 'text-gray-900'}`}  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16"><path fillRule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/></svg>
+                      <p className={`ml-1 font-bold ${hover === 'pink' ? 'text-gray-200' : 'text-gray-900'}`}>Flex Naira</p>
                   </div>
-                  <div className={`absolute ${hover === 'pink' ? 'end-5 bottom-0 delay-100 duration-700 ' : '-bottom-40 -end-44 delay-100 duration-700'}`}>
-                  <img className="h-44 w-44" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_b4eaa3708a/i_Phone_14_b4eaa3708a.avif"/>
+                  <div className={`absolute ${hover === 'pink' ? 'end-5 bottom-0 delay-100 duration-700 ' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
+                  <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_b4eaa3708a/i_Phone_14_b4eaa3708a.avif"/>
                   </div>
               </div>
 
               <div onMouseEnter={() => handleHover('gray')} onMouseLeave={() => handleLeave('gray')} 
-                   className={`mt-10 w-[90%] h-[27rem] mx-auto rounded-3xl relative overflow-hidden cursor-pointer 
-                   ${hover === 'gray' ? 'bg-gray-800' : 'bg-slate-50'}`}>
+                   className={`mt-10 w-[90%] h-[29rem] mx-auto rounded-3xl relative overflow-hidden cursor-pointer md:w-[68%]
+                    min-[1023px]:w-[85%] min-[1023px]:h-[30rem] min-[1023px]:mr-[12%]  ${hover === 'gray' ? 'bg-gray-800' : 'bg-slate-50'}`}>
                   <div className="py-16 px-6">
-                      <h1 className={`text-center text-3xl font-bold  ${hover === 'gray' ? 'text-gray-200' : 'text-gray-900'}`}>Flex Dollar</h1>
-                      <p className={`text-center mt-3 ${hover === 'gray' ? 'text-gray-50' : 'text-gray-500'}`}>Save and grow your money in foreign currencies such as Dollars.</p>
+                      <h1 className={`text-center text-3xl font-bold min-[1023px]:text-start min-[1023px]:text-4xl   
+                      ${hover === 'gray' ? 'text-gray-200' : 'text-gray-900'}`}>Flex Dollar</h1>
+                      <p className={`text-center mt-3 min-[1023px]:text-start min-[1023px]:text-2xl min-[1023px]:font-thin
+                      ${hover === 'gray' ? 'text-gray-50' : 'text-gray-500'}`}>Save and grow your money in <br className="max-[1022px]:hidden"/> foreign currencies such as <br className="max-[1022px]:hidden"/> Dollars.</p>
                   </div>
-                  <div className="flex justify-start mt-20 px-8 ">
-                      <svg className={`${hover === 'gray' ? 'text-gray-200' : 'text-gray-900'}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 10L20 15L15 20" stroke="#122231" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20" stroke="#122231" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  <div className="flex absolute bottom-10 px-8 ">
+                      <svg className={`h-6 w-6 -mt-1 ${hover === 'gray' ? 'text-gray-200' : 'text-gray-900'}`}  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16"><path fillRule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/></svg>
                       <p className={`ml-1 font-bold ${hover === 'gray' ? 'text-gray-200' : 'text-gray-900'}`}>Flex Dollar</p>
                   </div>
-                  <div className={`absolute ${hover === 'gray' ? 'end-5 bottom-0 delay-100 duration-700 ' : '-bottom-40 -end-44 delay-100 duration-700'}`}>
-                  <img className="h-44 w-44" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphone12_5d07b2941e/iphone12_5d07b2941e.avif"/>
+                  <div className={`absolute ${hover === 'gray' ? 'end-5 bottom-0 delay-100 duration-700 ' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
+                  <img className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphone12_5d07b2941e/iphone12_5d07b2941e.avif"/>
                   </div>
               </div>
        </div>
     </main>
-  
+     
   )
 }
