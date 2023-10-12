@@ -7,6 +7,7 @@ const Invest = () => {
         <Navbar/>
         <div className='mt-32'>
         <h1 className='font-extrabold'>Hello investors</h1>
+        <p>cool</p>
 
         </div>
     </div>
