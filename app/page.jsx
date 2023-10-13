@@ -8,13 +8,8 @@ export default function Home() {
               const [scroll, setScroll ] = useState(false);
 
               
-              function handleHover(tab){
-                setHover(tab);   
-              }
-
-              function handleLeave(tab){
-                setHover(tab);
-              }
+              function handleHover(tab){ setHover(tab); }
+              function handleLeave(tab){ setHover(tab); }
 
               useEffect(() => {
                 const handleScroll = () => {
@@ -237,7 +232,7 @@ export default function Home() {
        <div>
           <div>
              <h1 className="pt-16 text-center text-3xl min-[580px]:text-5xl font-bold text-gray-900 px-7">Meet Our Saver of the Month</h1>
-             <p className=" text-center mt-3 text-lg min-[580px]:text-2xl text-gray-500 px-8 md:px-[20%]">Every month, we shine a spotlight on one saver, asking them about their savings culture and how piggyvest has helped them.</p>  
+             <p className=" text-center mt-6 text-lg min-[580px]:text-2xl text-gray-500 px-8 md:px-[20%]">Every month, we shine a spotlight on one saver, asking them about their savings culture and how piggyvest has helped them.</p>  
           </div>
           
           <div className=" mt-14 lg:w-[47.42%] w-[75%] h-[24.4rem] bg-slate-200 mx-auto rounded-2xl overflow-hidden container">

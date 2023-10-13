@@ -31,7 +31,7 @@ const Footer = () => {
 
 
 
-        <div className=" lg:flex lg:w-[87%] lg:mx-auto mt-20 lg:h-60  border-b border-gray-300
+        <div className=" lg:flex lg:w-[87%] lg:mx-auto mt-32 lg:h-60  border-b border-gray-300
                             flex max-[1023px]:flex-col  max-[1023px]:w-[87%] max-[1023px]:mx-auto">
             <div className="-mt-8">
                 <Link href="/">
