@@ -1,9 +1,11 @@
 "use client"
 import { useState, useEffect } from "react"
+import Image from "next/image";
 
 import NavInvest from "../compnents/NavInvest";
 import Button from "../compnents/Button";
-import Link from "next/link";
+import Logo from './farm.png'
+import Logosmall from './farm-sm.png'
 
 const Invest = () => {
                 const [invScroll, setinvScroll ] = useState(false);
@@ -55,9 +57,43 @@ const Invest = () => {
          </div>
 
          <div>
-            <h1 className="text-3xl md:text-5xl font-bold text-center pt-20 text-gray-800">Simple investments with great returns</h1>
+            <h1 className="text-3xl md:text-5xl min-[539px]:text-4xl min-[539px]:px-5 font-bold text-center pt-20 text-gray-800">Simple investments with great returns</h1>
             <p className="text-center px-5 pt-4 text-gray-600 pb-16 md:text-xl">Investments are made readily accessible to everyone</p>
          </div>
+
+         <div className="w-screen md:grid md:grid-cols-2  lg:grid-cols-3 lg:justify-around">
+            <div className="relative mx-auto w-[90%] min-[539px]:w-[67%] md:w-[90%] xl:w-[78%] md:ml-7 lg:ml-6 xl:ml-[25%] h-[35rem] rounded-3xl bg-white border-t border-gray-300">
+              <h1 className="text-center text-3xl font-bold pt-16 px-16 max-[281px]:px-7 text-purple-700 xl:text-start xl:px-5">Investments simplified</h1>
+              <p className="text-center px-5 pt-8 text-gray-800 leading-normal xl:text-start">With minimum investments starting as low as N5,000, investment is no longer out of reach. Everyone is welcome.</p>
+              <img className="absolute bottom-0 ml-[10%] w-[80%] max-[281px]:h-[35%] h-[40%] " src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/IMG_5250_1_9_56234bc747_1c01526eb7/IMG_5250_1_9_56234bc747_1c01526eb7.png" class="card-img"/>
+            </div>
+
+            <div className="relative mt-14 md:mt-0 mx-auto w-[90%] min-[539px]:w-[67%] md:w-[90%] xl:w-[78%] md:mr-7 lg:ml-4 xl:ml-16  h-[35rem] rounded-3xl bg-white border-t border-gray-300">
+              <h1 className="text-center text-3xl font-bold pt-16 px-16 max-[281px]:px-7 text-purple-700 xl:text-start xl:px-5">Invest confidently</h1>
+              <p className="text-center px-5 pt-8 text-gray-800 leading-normal xl:text-start">We work with leading licensed investment houses such as ARM, AIICO and Stanbic.</p>
+              <img className="absolute bottom-0 ml-[10%] w-[80%] max-[281px]:h-[35%] h-[40%] " src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/IMG_5250_1_10_19f162a7df_098e6f349b/IMG_5250_1_10_19f162a7df_098e6f349b.png" class="card-img"/>
+            </div>
+
+            <div className="relative mt-14 lg:mt-0 lg:ml-3 md:ml-[53%] mx-auto w-[90%] min-[539px]:w-[67%] md:w-[90%] xl:mr-[25%] xl:w-[78%] h-[35rem] rounded-3xl bg-white border-t border-gray-300">
+              <h1 className="text-center text-3xl font-bold pt-16 px-16 max-[281px]:px-7 text-purple-700 xl:text-start xl:px-5">Diversify your portfolio</h1>
+              <p className="text-center px-5 pt-8 text-gray-800 leading-normal xl:text-start">Invest in various industries such as fixed income instruments, agriculture, transportation, etc.</p>
+              <img className="absolute bottom-0 ml-[10%] w-[80%] max-[281px]:h-[35%] h-[40%] " src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/IMG_5250_1_11_26239e95f8_fb876eec60/IMG_5250_1_11_26239e95f8_fb876eec60.png" class="card-img"/>
+            </div>
+         </div>
+
+         <div className="mt-20 lg:mt-40 relative w-screen h-[48rem] md:h-[60rem] lg:h-[26rem]  bg-violet-700">
+             <h1 className="text-center font-bold text-3xl md:text-5xl md:px-24 pt-20 lg:pt-12 text-gray-50 
+                    lg:text-start">We've made it easier for <br className="max-[1023px]:hidden"/>  anyone to get started.</h1>
+             <p className="text-center pt-3 px-6 text-gray-50 max-[281px]:text-sm md:text-xl md:px-24 md:pt-10
+                    md:leading-relaxed lg:text-start ">Finally, you can access pre-vetted low-medium risk primary <br className="max-[1023px]:hidden"/>  and secondary investment opportunities easily with any <br className="max-[1023px]:hidden"/>  amount you have. No hidden fees/charges. Thorough due <br className="max-[1023px]:hidden"/>  diligence and pre-vetting on all investments are carried out for <br className="max-[1023px]:hidden"/>  maximum safety.</p>
+             
+             <Image src={Logosmall}   
+              className=" absolute bottom-0 h-[50%] max-[281px]:h-[45%] w-[100%] min-[539px]:hidden" alt="NDPR audit"  quality={100} placeholder='blur'/>
+            <Image src={Logo}   
+              className=" absolute bottom-0 h-[50%] w-[100%] max-[539px]:hidden lg:w-[43%] lg:end-0 lg:h-[100%]" alt="NDPR audit"  quality={100} placeholder='blur'/>
+        
+         </div>
+
     </main>
 
   )
