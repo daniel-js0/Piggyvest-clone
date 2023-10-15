@@ -35,7 +35,7 @@ const NavInvest = ({ invScroll }) => {
                   <Link href="/" onMouseEnter={handleHoverInv} onMouseLeave={handleHoverInv2}><h2 className={`font-semibold ${invScroll ? 'text-gray-600': 'text-gray-50'}`} >Save</h2></Link>
                   <Link href="/invest"><h2 className={`font-semibold ${invScroll ? 'text-gray-600': 'text-gray-50'}`}  >Invest</h2></Link>
                   <Link href="/stories"><h2 className={`font-semibold ${invScroll ? 'text-gray-600': 'text-gray-50'}`}  >Stories</h2></Link>
-                  <Link href="/"><h2 className={`font-semibold ${invScroll ? 'text-gray-600': 'text-gray-50'}`}  >FAQs</h2></Link>
+                  <Link href="/faq"><h2 className={`font-semibold ${invScroll ? 'text-gray-600': 'text-gray-50'}`}  >FAQs</h2></Link>
                   <Link href="/" onMouseEnter={handleHoverInv3} onMouseLeave={handleHoverInv4}><h2 className={`font-semibold ${invScroll ? 'text-gray-600': 'text-gray-50'}`}  >Resources</h2></Link> 
               </div>
         </div> 
@@ -152,7 +152,7 @@ const NavInvest = ({ invScroll }) => {
                   <Link href="/" ><h2 className={` text-center font-semibold text-gray-600 `} >Save</h2></Link>
                   <Link href="/invest"><h2 className='text-gray-600 font-semibold text-center pt-2' >Invest</h2></Link>
                   <Link href="/stories"><h2 className='text-gray-600 font-semibold text-center pt-2' >Stories</h2></Link>
-                  <Link href="/"><h2 className='text-gray-600 font-semibold text-center pt-2' >FAQs</h2></Link>
+                  <Link href="/faq"><h2 className='text-gray-600 font-semibold text-center pt-2' >FAQs</h2></Link>
                   <Link href="/" ><h2 className='pt-2 text-center text-gray-600 font-semibold' >Resources</h2></Link> 
               </div>
         </div> 

@@ -43,7 +43,7 @@ const Navbar = ({scroll, setShowStory, showStory,  click, handleClick, clickfaq,
               </div>
         </div> 
         <div className='lg:flex hidden mt-4 md:mr-[4%] xl:mr-[8%]'>
-              <Link href="/login">
+              <Link href="https://myfirstreactapp-bydaniel.netlify.app/"> 
                 <button className='h-14 w-24  border border-gray-900 rounded-xl font-semibold text-gray-800'>Sign in</button>
               </Link>
               <Link href="/">
@@ -155,7 +155,7 @@ const Navbar = ({scroll, setShowStory, showStory,  click, handleClick, clickfaq,
                   <Link href="/" ><h2 className={` text-center font-semibold text-gray-600 `} >Save</h2></Link>
                   <Link href="/invest"><h2 className='text-gray-600 font-semibold text-center pt-2' >Invest</h2></Link>
                   <Link href="/stories"><h2 className='text-gray-600 font-semibold text-center pt-2' >Stories</h2></Link>
-                  <Link href="/"><h2 className='text-gray-600 font-semibold text-center pt-2' >FAQs</h2></Link>
+                  <Link href="/faq"><h2 className='text-gray-600 font-semibold text-center pt-2' >FAQs</h2></Link>
                   <Link href="/" ><h2 className='pt-2 text-center text-gray-600 font-semibold' >Resources</h2></Link> 
               </div>
         </div> 
