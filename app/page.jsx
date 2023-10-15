@@ -49,6 +49,7 @@ export default function Home() {
         
     <main className="">
        <Navbar scroll={scroll}/>
+       {/* Home page begins here  */}
        <div className='mt-52 min-[1023px]:flex '>
            <div className='w-screen md:w-[70%] min-[1023px]:w-[39%] md:mx-auto '>
                <h1 className='text-center px-2 text-5xl font-bold 
@@ -73,7 +74,7 @@ export default function Home() {
  
            <div className="w-[94%] mx-auto sm:mx-auto sm:w-[60%] lg:w-[45%] lg:scale-110 md:mx-auto mt-14 relative
                           min-[1023px]:-mt-20 xl:animate-bounce-slow">
-              <div className="lg:w-[75%] mt-5 mx-auto md:h-[29rem] h-[22.5rem] w-[85%] bg-no-repeat overflow-hidden bg-center rounded-3xl " >
+              <div className="lg:w-[75%] mt-5 mx-auto md:h-[29rem] h-[22.5rem] w-[85%] bg-no-repeat overflow-hidden bg-center rounded-[1.75rem] " >
                 <Image
                  src="/background.png"
                  className="w-[100%] h-[100%]"
@@ -97,7 +98,7 @@ export default function Home() {
            </div>
 
        </div>
-     
+        {/* some texts  */}
        <div className="mt-20 min-[990px]:flex min-[990px]:justify-start min-[990px]:ml-[6.8%] ">
           <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg"
           className="mx-auto min-[990px]:mt-14">
@@ -139,7 +140,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'blue' ? 'text-gray-200' : 'text-gray-900'}`}>Piggybank</p>
                   </div>
                   <div className={`absolute ${hover === 'blue' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-40 min-[1023px]:-bottom-60 delay-100 duration-700'}`}>
-                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44  min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_11_a9e52d90bf/i_Phone_14_11_a9e52d90bf.avif"/>
+                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44  min-[1023px]:h-60 min-[1023px]:w-60 rounded-t-[2.4rem]" src="/slider1.png"/>
                   </div>
               </div>  
 
@@ -157,7 +158,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'sky' ? 'text-gray-200' : 'text-gray-900'}`}>Safelock</p>
                   </div>
                   <div className={`absolute ${hover === 'sky' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-40 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_22_c3fb491e57/i_Phone_14_22_c3fb491e57.avif"/>
+                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 rounded-t-[2.5rem]" src="/slider2.png"/>
                   </div>
               </div> 
 
@@ -175,7 +176,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'green' ? 'text-gray-200' : 'text-gray-900'}`}>Target Savings</p>
                   </div>
                   <div className={`absolute ${hover === 'green' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphonw_a485f92ad1/iphonw_a485f92ad1.avif"/>
+                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 rounded-t-[2.5rem]" src="/slider3.png"/>
                   </div>
               </div> 
 
@@ -193,7 +194,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'pink' ? 'text-gray-200' : 'text-gray-900'}`}>Flex Naira</p>
                   </div>
                   <div className={`absolute ${hover === 'pink' ? 'end-5 bottom-0 delay-100 duration-700 ' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_b4eaa3708a/i_Phone_14_b4eaa3708a.avif"/>
+                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 rounded-t-[2.5rem]" src="/slider4.png"/>
                   </div>
               </div>
 
@@ -211,7 +212,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'gray' ? 'text-gray-200' : 'text-gray-900'}`}>Flex Dollar</p>
                   </div>
                   <div className={`absolute ${hover === 'gray' ? 'end-5 bottom-0 delay-100 duration-700 ' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphone12_5d07b2941e/iphone12_5d07b2941e.avif"/>
+                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 rounded-t-[2.5rem]" src="/slider5.png"/>
                   </div>
               </div>
        </div>
@@ -234,7 +235,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold xl:text-lg`}>Learn about Investments</p>
                   </div>
                    <div className={`absolute w-[100%] h-[50%] md:h-[60%] max-[281px]:h-[40%] xl:h-[88%] flex justify-center xl:justify-end  bottom-0`}>
-                   <Image width={360} height={100} quality={100} alt="PiggyVest" className=" h-[100%] w-[85%] md:w-[60%] min-[1023px]:w-[45%] xl:w-[36%] xl:mr-12" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/iphone_Invest_d524b30868/iphone_Invest_d524b30868.avif" />
+                   <Image width={360} height={100} quality={100} alt="PiggyVest" className=" h-[100%] w-[85%] md:w-[60%] min-[1023px]:w-[45%] xl:w-[36%] xl:mr-12 rounded-t-[3.6rem]" src="/purple.png"/>
                   </div>
           </div>  
        </div>

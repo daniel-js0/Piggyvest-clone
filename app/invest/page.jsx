@@ -41,7 +41,7 @@ const Invest = () => {
                   <div className="min-[1023px]:pt-48 pt-32">
                       <h1 className={`text-center text-5xl font-bold px-6 text-gray-100 
                              min-[1023px]:text-5xl min-[1023px]:text-start xl:px-24 min-[1023px]:px-10`}>Invest on the go</h1>
-                      <p className='h-12 w-44 mx-auto mt-6 rounded-full bg-slate-200 py-3 px-5 font-semibold xl:ml-24 min-[1023px]:ml-10 text-violet-700'>Up to 35% returns</p>
+                      <p className='h-12 w-44 mx-auto mt-6 rounded-full bg-slate-200 py-3 px-2 md:px-5 font-semibold xl:ml-24 min-[1023px]:ml-10 text-violet-700'>Up to 35% returns</p>
                       <p className={`text-center text-xl mt-5 px-6 md:px-48 text-gray-300
                             min-[1023px]:text-start xl:px-24 min-[1023px]:px-10  min-[1023px]:text-xl min-[1023px]:mt-8`} >Invest securely and confidently on the go.<br className="max-[1023px]:hidden"/> Up to 25% returns, 6-12 month duration.</p>
                   </div>
