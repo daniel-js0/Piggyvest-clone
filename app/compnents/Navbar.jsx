@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Image from "next/image";
 import { useState } from 'react';
 
-const Navbar = ({scroll, setShowStory }) => {
+                
+const Navbar = ({scroll, setShowStory, showStory,  click, handleClick, clickfaq, handleClickfaq }) => {
                const [save, setSave] = useState(false);
                const [resource, setResource] = useState(false);
                const [offcanvas, setOffcanvas] = useState()
@@ -12,15 +13,18 @@ const Navbar = ({scroll, setShowStory }) => {
                function handleHover2(){ setSave(false);}
                function handleHover3(){ setResource(true);}
                function handleHover4(){ setResource(false);}
+
+            
+
                function handleOffcanvas(){
-                 setOffcanvas(!offcanvas); 
-                 setShowStory(true) 
+                 setOffcanvas(!offcanvas);  
+                 setShowStory(!showStory); 
                 }
 
   return (
         
     
-    <nav className={`z-10 fixed top-0 flex flex-row justify-between gap-14 h-20 w-screen 
+    <nav className={`z-20 fixed top-0 flex flex-row justify-between gap-14 h-20 w-screen 
                     md:h-24 md:gap-20 ${scroll ? ' bg-gray-50 shadow-xl' : 'bg-slate-100'}`}>
         <div className='flex flex-row justify-start gap-14 ml-5 md:ml-[2%] xl:ml-[8%]'>
               <Link href="/">
@@ -33,13 +37,13 @@ const Navbar = ({scroll, setShowStory }) => {
               <div className='lg:flex flex-row  justify-evenly gap-6 mt-10 hidden'>
                   <Link href="/" onMouseEnter={handleHover} onMouseLeave={handleHover2}><h2 className={`font-semibold text-gray-600 `} >Save</h2></Link>
                   <Link href="/invest"><h2 className='text-gray-600 font-semibold' >Invest</h2></Link>
-                  <Link href="/stories"><h2 className='text-gray-600 font-semibold' >Stories</h2></Link>
-                  <Link href="/"><h2 className='text-gray-600 font-semibold' >FAQs</h2></Link>
+                  <Link onClick={handleClick} href="/stories"><h2 className={`font-semibold ${click === 'story' ? 'text-blue-600' :'text-gray-600'}`} >Stories</h2></Link>
+                  <Link onClick={handleClickfaq} href="/faq"><h2 className={`font-semibold ${clickfaq === 'faq' ? 'text-blue-600' :'text-gray-600'}`} >FAQs</h2></Link>
                   <Link href="/" onMouseEnter={handleHover3} onMouseLeave={handleHover4}><h2 className='text-gray-600 font-semibold' >Resources</h2></Link> 
               </div>
         </div> 
         <div className='lg:flex hidden mt-4 md:mr-[4%] xl:mr-[8%]'>
-              <Link href="/">
+              <Link href="/login">
                 <button className='h-14 w-24  border border-gray-900 rounded-xl font-semibold text-gray-800'>Sign in</button>
               </Link>
               <Link href="/">

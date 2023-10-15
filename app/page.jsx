@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Home() {
               const [hover, setHover] = useState("");
               const [scroll, setScroll ] = useState(false);
-
+           
               
               function handleHover(tab){ setHover(tab); }
               function handleLeave(tab){ setHover(tab); }
@@ -48,7 +48,7 @@ export default function Home() {
   return (
         
     <main className="">
-       <Navbar scroll={scroll}/>
+       <Navbar scroll={scroll} />
        {/* Home page begins here  */}
        <div className='mt-52 min-[1023px]:flex '>
            <div className='w-screen md:w-[70%] min-[1023px]:w-[39%] md:mx-auto '>
@@ -140,7 +140,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'blue' ? 'text-gray-200' : 'text-gray-900'}`}>Piggybank</p>
                   </div>
                   <div className={`absolute ${hover === 'blue' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-40 min-[1023px]:-bottom-60 delay-100 duration-700'}`}>
-                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44  min-[1023px]:h-60 min-[1023px]:w-60 rounded-t-[2.4rem]" src="/slider1.png"/>
+                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44  min-[1023px]:h-60 min-[1023px]:w-60 lg:rounded-t-[2.4rem] rounded-t-[1.7rem]" src="/slider1.png"/>
                   </div>
               </div>  
 
@@ -158,7 +158,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'sky' ? 'text-gray-200' : 'text-gray-900'}`}>Safelock</p>
                   </div>
                   <div className={`absolute ${hover === 'sky' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-40 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 rounded-t-[2.5rem]" src="/slider2.png"/>
+                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 lg:rounded-t-[2.4rem] rounded-t-[1.7rem]" src="/slider2.png"/>
                   </div>
               </div> 
 
@@ -176,7 +176,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'green' ? 'text-gray-200' : 'text-gray-900'}`}>Target Savings</p>
                   </div>
                   <div className={`absolute ${hover === 'green' ? 'end-5 bottom-0 delay-100 duration-700' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 rounded-t-[2.5rem]" src="/slider3.png"/>
+                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 lg:rounded-t-[2.4rem] rounded-t-[1.7rem]" src="/slider3.png"/>
                   </div>
               </div> 
 
@@ -194,7 +194,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'pink' ? 'text-gray-200' : 'text-gray-900'}`}>Flex Naira</p>
                   </div>
                   <div className={`absolute ${hover === 'pink' ? 'end-5 bottom-0 delay-100 duration-700 ' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 rounded-t-[2.5rem]" src="/slider4.png"/>
+                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 lg:rounded-t-[2.4rem] rounded-t-[1.7rem]" src="/slider4.png"/>
                   </div>
               </div>
 
@@ -212,7 +212,7 @@ export default function Home() {
                       <p className={`ml-1 font-bold ${hover === 'gray' ? 'text-gray-200' : 'text-gray-900'}`}>Flex Dollar</p>
                   </div>
                   <div className={`absolute ${hover === 'gray' ? 'end-5 bottom-0 delay-100 duration-700 ' : '-bottom-40 -end-44 min-[1023px]:-bottom-60  delay-100 duration-700'}`}>
-                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 rounded-t-[2.5rem]" src="/slider5.png"/>
+                   <Image width={440} height={440} alt="PiggyVest" className="h-44 w-44 min-[1023px]:h-60 min-[1023px]:w-60 lg:rounded-t-[2.4rem] rounded-t-[1.7rem]" src="/slider5.png"/>
                   </div>
               </div>
        </div>
@@ -234,8 +234,8 @@ export default function Home() {
                       <svg className={`h-7 w-6 -mt-1 xl:w-7 `} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16"><path fillRule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/></svg>
                       <p className={`ml-1 font-bold xl:text-lg`}>Learn about Investments</p>
                   </div>
-                   <div className={`absolute w-[100%] h-[50%] md:h-[60%] max-[281px]:h-[40%] xl:h-[88%] flex justify-center xl:justify-end  bottom-0`}>
-                   <Image width={360} height={100} quality={100} alt="PiggyVest" className=" h-[100%] w-[85%] md:w-[60%] min-[1023px]:w-[45%] xl:w-[36%] xl:mr-12 rounded-t-[3.6rem]" src="/purple.png"/>
+                  <div className={`absolute w-[100%] h-[50%] md:h-[60%] max-[281px]:h-[40%] xl:h-[88%] flex justify-center xl:justify-end  bottom-0`}>
+                      <Image width={360} height={100} quality={100} alt="PiggyVest" className=" h-[100%] w-[85%] md:w-[60%] min-[1023px]:w-[45%] xl:w-[36%] xl:mr-12  lg:rounded-t-[3.5rem] rounded-t-[2.7rem]" src="/purple.png"/>
                   </div>
           </div>  
        </div>
