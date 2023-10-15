@@ -76,11 +76,11 @@ export default function Home() {
                              " >
                 <div>
                
-                   <Image width={360} height={100} quality={100} className="w-36 h-10 absolute start-3 top-24" alt="card-img" placeholder="empty" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/card2_1_6e785a36df/card2_1_6e785a36df.avif" />
-                   <Image width={360} height={100} quality={100} className="w-36 h-14 absolute end-4 top-16" alt="card-img"  placeholder="empty"  src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/frame2_1_b4d1dca21d/frame2_1_b4d1dca21d.avif" />
-                   <Image width={360} height={100} quality={100} className="w-36 h-14 absolute start-3 bottom-24" alt="card-img" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/Frame3_1_4b13e4d5cb/Frame3_1_4b13e4d5cb.avif" />
-                   <Image width={360} height={100} quality={100} className="w-36 h-10 absolute end-4 bottom-32" alt="card-img" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/card4_1_8df24b3ed8/card4_1_8df24b3ed8.avif" />
-                   <Image width={360} height={100} quality={100} className="w-36 h-12 absolute bottom-1 sm:-bottom-2 max-[361px]:bottom-9 start-1/3" alt="card-img" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/Frame5_1_4facd890fc/Frame5_1_4facd890fc.avif" />
+                   <Image width={130} height={100} quality={100} className="w-36 h-10 absolute start-3 top-24" alt="card-img" placeholder="empty" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/card2_1_6e785a36df/card2_1_6e785a36df.avif" />
+                   <Image width={130} height={100} quality={100} className="w-36 h-14 absolute end-4 top-16" alt="card-img"  placeholder="empty"  src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/frame2_1_b4d1dca21d/frame2_1_b4d1dca21d.avif" />
+                   <Image width={130} height={100} quality={100} className="w-36 h-14 absolute start-3 bottom-24" alt="card-img" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/Frame3_1_4b13e4d5cb/Frame3_1_4b13e4d5cb.avif" />
+                   <Image width={130} height={100} quality={100} className="w-36 h-10 absolute end-4 bottom-32" alt="card-img" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/card4_1_8df24b3ed8/card4_1_8df24b3ed8.avif" />
+                   <Image width={130} height={100} quality={100} className="w-36 h-12 absolute bottom-1 sm:-bottom-2 max-[361px]:bottom-9 start-1/3" alt="card-img" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/Frame5_1_4facd890fc/Frame5_1_4facd890fc.avif" />
                 </div> 
 
               </div> 
