@@ -4,6 +4,7 @@ import Navbar from "./compnents/Navbar";
 import YouTube from 'react-youtube';
 import Image from "next/image";
 
+
 export default function Home() {
               const [hover, setHover] = useState("");
               const [scroll, setScroll ] = useState(false);
@@ -71,9 +72,17 @@ export default function Home() {
            </div>
  
            <div className="w-[94%] mx-auto sm:mx-auto sm:w-[60%] lg:w-[45%] lg:scale-110 md:mx-auto mt-14 relative
-                          min-[1023px]:-mt-12 xl:animate-bounce-slow">
-              <div className="w-[85%] mt-5 mx-auto h-96 bg-[url('https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/pexels_ketut_subiyanto_4350099_bc5e069ebe/pexels_ketut_subiyanto_4350099_bc5e069ebe.avif')] bg-no-repeat bg-contain bg-center
-                             " >
+                          min-[1023px]:-mt-20 xl:animate-bounce-slow">
+              <div className="lg:w-[75%] mt-5 mx-auto md:h-[29rem] h-[22.5rem] w-[85%] bg-no-repeat overflow-hidden bg-center rounded-3xl " >
+                <Image
+                 src="/background.png"
+                 className="w-[100%] h-[100%]"
+                 alt="NDPR audit" 
+                 width={320} 
+                 height={240}
+                 quality={100}
+                 placeholder='empty' 
+                   />
                 <div>
                
                    <Image width={130} height={100} quality={100} className="w-36 h-10 absolute start-3 top-24" alt="card-img" placeholder="empty" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/card2_1_6e785a36df/card2_1_6e785a36df.avif" />
