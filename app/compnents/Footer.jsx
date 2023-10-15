@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className="mx-auto bg-gray-50 ">
         
          <div className="flex justify-center">
-          <h1 className="lg:text-3xl text-2xl leading-4 font-extrabold text-gray-900 pt-44 pb-5">As featured in</h1>
+          <h1 className="lg:text-3xl text-2xl leading-4 font-extrabold text-gray-900 pt-36 pb-5">As featured in</h1>
          </div>
          <div className="mt-7 grid grid-cols-1  min-[374px]:grid-cols-2 sm:grid-cols-3 lg:flex lg:justify-around md:gap-4 md:w-[80%] md:mx-auto">
             <a href="https://techpoint.africa/2018/05/31/piggybank-secures-1-1-million-funding/">

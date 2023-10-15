@@ -65,19 +65,19 @@ const Invest = () => {
             <div className="relative mx-auto w-[90%] min-[539px]:w-[67%] md:w-[90%] xl:w-[78%] md:ml-7 lg:ml-6 xl:ml-[25%] h-[35rem] rounded-3xl bg-white border-t border-gray-300">
               <h1 className="text-center text-3xl font-bold pt-16 px-16 max-[281px]:px-7 text-purple-700 xl:text-start xl:px-5">Investments simplified</h1>
               <p className="text-center px-5 pt-8 text-gray-800 leading-normal xl:text-start">With minimum investments starting as low as N5,000, investment is no longer out of reach. Everyone is welcome.</p>
-              <img className="absolute bottom-0 ml-[10%] w-[80%] max-[281px]:h-[35%] h-[40%] " src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/IMG_5250_1_9_56234bc747_1c01526eb7/IMG_5250_1_9_56234bc747_1c01526eb7.png" class="card-img"/>
+              <img className="absolute bottom-0 ml-[10%] w-[80%] max-[281px]:h-[35%] h-[40%] " src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/IMG_5250_1_9_56234bc747_1c01526eb7/IMG_5250_1_9_56234bc747_1c01526eb7.png" />
             </div>
 
             <div className="relative mt-14 md:mt-0 mx-auto w-[90%] min-[539px]:w-[67%] md:w-[90%] xl:w-[78%] md:mr-7 lg:ml-4 xl:ml-16  h-[35rem] rounded-3xl bg-white border-t border-gray-300">
               <h1 className="text-center text-3xl font-bold pt-16 px-16 max-[281px]:px-7 text-purple-700 xl:text-start xl:px-5">Invest confidently</h1>
               <p className="text-center px-5 pt-8 text-gray-800 leading-normal xl:text-start">We work with leading licensed investment houses such as ARM, AIICO and Stanbic.</p>
-              <img className="absolute bottom-0 ml-[10%] w-[80%] max-[281px]:h-[35%] h-[40%] " src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/IMG_5250_1_10_19f162a7df_098e6f349b/IMG_5250_1_10_19f162a7df_098e6f349b.png" class="card-img"/>
+              <img className="absolute bottom-0 ml-[10%] w-[80%] max-[281px]:h-[35%] h-[40%] " src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/IMG_5250_1_10_19f162a7df_098e6f349b/IMG_5250_1_10_19f162a7df_098e6f349b.png" />
             </div>
 
             <div className="relative mt-14 lg:mt-0 lg:ml-3 md:ml-[53%] mx-auto w-[90%] min-[539px]:w-[67%] md:w-[90%] xl:mr-[25%] xl:w-[78%] h-[35rem] rounded-3xl bg-white border-t border-gray-300">
               <h1 className="text-center text-3xl font-bold pt-16 px-16 max-[281px]:px-7 text-purple-700 xl:text-start xl:px-5">Diversify your portfolio</h1>
               <p className="text-center px-5 pt-8 text-gray-800 leading-normal xl:text-start">Invest in various industries such as fixed income instruments, agriculture, transportation, etc.</p>
-              <img className="absolute bottom-0 ml-[10%] w-[80%] max-[281px]:h-[35%] h-[40%] " src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/IMG_5250_1_11_26239e95f8_fb876eec60/IMG_5250_1_11_26239e95f8_fb876eec60.png" class="card-img"/>
+              <img className="absolute bottom-0 ml-[10%] w-[80%] max-[281px]:h-[35%] h-[40%] " src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/IMG_5250_1_11_26239e95f8_fb876eec60/IMG_5250_1_11_26239e95f8_fb876eec60.png"/>
             </div>
          </div>
 
@@ -88,12 +88,153 @@ const Invest = () => {
                     md:leading-relaxed lg:text-start ">Finally, you can access pre-vetted low-medium risk primary <br className="max-[1023px]:hidden"/>  and secondary investment opportunities easily with any <br className="max-[1023px]:hidden"/>  amount you have. No hidden fees/charges. Thorough due <br className="max-[1023px]:hidden"/>  diligence and pre-vetting on all investments are carried out for <br className="max-[1023px]:hidden"/>  maximum safety.</p>
              
              <Image src={Logosmall}   
-              className=" absolute bottom-0 h-[50%] max-[281px]:h-[45%] w-[100%] min-[539px]:hidden" alt="NDPR audit"  quality={100} placeholder='blur'/>
-            <Image src={Logo}   
-              className=" absolute bottom-0 h-[50%] w-[100%] max-[539px]:hidden lg:w-[43%] lg:end-0 lg:h-[100%]" alt="NDPR audit"  quality={100} placeholder='blur'/>
-        
+               className="absolute bottom-0 h-[50%] max-[281px]:h-[45%] w-[100%] min-[539px]:hidden" alt="NDPR audit"  quality={100} placeholder='blur'/>
+             <Image src={Logo}   
+               className="absolute bottom-0 h-[50%] w-[100%] max-[539px]:hidden lg:w-[43%] lg:end-0 lg:h-[100%]" alt="NDPR audit"  quality={100} placeholder='blur'/>
          </div>
 
+         <div className="pt-20">
+            <h1 className="font-bold text-3xl md:text-5xl md:px-8 text-gray-800 text-center">Recent Opportunities on Investify</h1>
+         </div>
+         
+         <div className="lg:grid lg:grid-cols-3">
+            <div className="w-[80%] md:w-[50%] lg:w-[85%] xl:ml-[16%] h-[29rem] mt-16 mx-auto rounded-3xl overflow-hidden bg-gray-50">
+                    <img className="h-[30%] w-[100%]" src="https://storage.googleapis.com/piggybankservice.appspot.com/investmentimgfiles/thumb.inv7660760425.jpg" alt="card image" class="image"/>
+
+                    <h1 className="font-bold text-3xl  text-gray-800 text-start px-7 mt-12"> CORPORATE DEBT NOTES SERIES XIV </h1>
+
+                    <div className="flex mt-5 ml-7 font-semibold">
+                        <div className="">
+                          <p className="text-gray-600">₦5,000</p>
+                          <p className="text-gray-600" >per unit</p>
+                        </div>
+
+                        <div className="ml-[34%]">
+                          <p className="text-gray-600" >530</p>
+                          <p className="text-gray-600" >Investors</p>
+                        </div>
+                    </div>
+          
+                    <div className="h-10 w-24 bg-rose-200 rounded-full mt-6 ml-7">
+                        <p className="text-center pt-2 text-rose-800 font-semibold"> Sold out</p> 
+                    </div>
+
+            </div>
+
+            <div className="w-[80%] md:w-[50%] lg:w-[85%] h-[29rem] mt-16 mx-auto rounded-3xl overflow-hidden bg-gray-50">
+              <img className="h-[30%] w-[100%]" src="https://storage.googleapis.com/piggybankservice.appspot.com/investmentimgfiles/thumb.inv5451cd4fa2.jpg" alt="card image" class="image"/>
+             
+              <h1 className="font-bold text-3xl  text-gray-800 text-start px-7 mt-12"> CORPORATE DEBT NOTES SERIES XIII </h1>
+
+              <div className="flex mt-5 ml-7 font-semibold">
+                  <div className="">
+                    <p className="text-gray-600">₦5,000</p>
+                    <p className="text-gray-600" >per unit</p>
+                  </div>
+
+                  <div className="ml-[34%]">
+                    <p className="text-gray-600" >563</p>
+                    <p className="text-gray-600" >Investors</p>
+                  </div>
+              </div>
+   
+              <div className="h-10 w-24 bg-rose-200 rounded-full mt-6 ml-7">
+                  <p className="text-center pt-2 text-rose-800 font-semibold"> Sold out</p> 
+              </div>
+
+            </div>
+
+            <div className="w-[80%] md:w-[50%] lg:w-[85%] xl:mr-[16%] h-[29rem] mt-16 mx-auto rounded-3xl overflow-hidden bg-gray-50">
+                    <img className="h-[30%] w-[100%]" src="https://storage.googleapis.com/piggybankservice.appspot.com/investmentimgfiles/thumb.inv7660760425.jpg" alt="card image" class="image"/>
+
+                    <h1 className="font-bold text-3xl  text-gray-800 text-start px-7 mt-12"> CORPORATE DEBT NOTES SERIES XII </h1>
+
+                    <div className="flex mt-5 ml-7 font-semibold">
+                        <div className="">
+                          <p className="text-gray-600">₦5,000</p>
+                          <p className="text-gray-600" >per unit</p>
+                        </div>
+
+                        <div className="ml-[34%]">
+                          <p className="text-gray-600" >232</p>
+                          <p className="text-gray-600" >Investors</p>
+                        </div>
+                    </div>
+          
+                    <div className="h-10 w-24 bg-rose-200 rounded-full mt-6 ml-7">
+                        <p className="text-center pt-2 text-rose-800 font-semibold"> Sold out</p> 
+                    </div>
+
+            </div>
+
+            <div className="w-[80%] md:w-[50%] lg:w-[85%] xl:ml-[16%] h-[29rem] mt-16 mx-auto rounded-3xl overflow-hidden bg-gray-50">
+                   <img className="h-[30%] w-[100%]" src="https://storage.googleapis.com/piggybankservice.appspot.com/investmentimgfiles/thumb.inv7bbae70c7a.jpg" alt="card image" class="image"/>
+                    
+                    <h1 className="font-bold text-3xl  text-gray-800 text-start px-7 mt-12"> CORPORATE DEBT NOTES SERIES XI</h1>
+  
+                    <div className="flex mt-5 ml-7 font-semibold">
+                        <div className="">
+                          <p className="text-gray-600">₦5,000</p>
+                          <p className="text-gray-600" >per unit</p>
+                        </div>
+
+                        <div className="ml-[34%]">
+                          <p className="text-gray-600" >250</p>
+                          <p className="text-gray-600" >Investors</p>
+                        </div>
+                    </div>
+          
+                    <div className="h-10 w-24 bg-rose-200 rounded-full mt-6 ml-7">
+                        <p className="text-center pt-2 text-rose-800 font-semibold"> Sold out</p> 
+                    </div>
+
+            </div>
+            
+            <div className="w-[80%] md:w-[50%] lg:w-[85%] h-[29rem] mt-16 mx-auto rounded-3xl overflow-hidden bg-gray-50">
+                    <img className="h-[30%] w-[100%]" src="https://storage.googleapis.com/piggybankservice.appspot.com/investmentimgfiles/thumb.inv3bb22b27a3.jpg" alt="card image" class="image"/>  
+                    <h1 className="font-bold text-3xl  text-gray-800 text-start px-7 mt-12"> CORPORATE DEBT NOTES SERIES X</h1>
+  
+                    <div className="flex mt-5 ml-7 font-semibold">
+                        <div className="">
+                          <p className="text-gray-600">₦5,000</p>
+                          <p className="text-gray-600" >per unit</p>
+                        </div>
+
+                        <div className="ml-[34%]">
+                          <p className="text-gray-600" >245</p>
+                          <p className="text-gray-600" >Investors</p>
+                        </div>
+                    </div>
+          
+                    <div className="h-10 w-24 bg-rose-200 rounded-full mt-6 ml-7">
+                        <p className="text-center pt-2 text-rose-800 font-semibold"> Sold out</p> 
+                    </div>
+
+            </div>
+
+            <div className="w-[80%] md:w-[50%] lg:w-[85%] xl:mr-[16%] h-[29rem] mt-16 mb-16 mx-auto rounded-3xl overflow-hidden bg-gray-50">
+                    <img className="h-[30%] w-[100%]"  src="https://storage.googleapis.com/piggybankservice.appspot.com/investmentimgfiles/thumb.inv9050c5052e.jpg" alt="card image" class="image"/>
+                    <h1 className="font-bold text-3xl  text-gray-800 text-start px-7 mt-12"> CORPORATE DEBT NOTES SERIES IX</h1>
+  
+                    <div className="flex mt-5 ml-7 font-semibold">
+                        <div className="">
+                          <p className="text-gray-600">₦5,000</p>
+                          <p className="text-gray-600" >per unit</p>
+                        </div>
+
+                        <div className="ml-[34%]">
+                          <p className="text-gray-600" >1969</p>
+                          <p className="text-gray-600" >Investors</p>
+                        </div>
+                    </div>
+          
+                    <div className="h-10 w-24 bg-rose-200 rounded-full mt-6 ml-7">
+                        <p className="text-center pt-2 text-rose-800 font-semibold"> Sold out</p> 
+                    </div>
+
+            </div>
+         </div>
+     
     </main>
 
   )
