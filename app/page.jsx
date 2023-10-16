@@ -33,7 +33,7 @@ export default function Home() {
 
                 const timeout = setTimeout(() => {
                   setIsVisible(true);
-                }, 400);
+                }, 200);
             
                 return () => {
                   clearTimeout(timeout)
