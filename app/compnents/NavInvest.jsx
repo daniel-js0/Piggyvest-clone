@@ -40,7 +40,7 @@ const NavInvest = ({ invScroll }) => {
               </div>
         </div> 
         <div className='lg:flex hidden mt-4 md:mr-[4%] xl:mr-[8%]'>
-              <Link href="/">
+              <Link href="https://myfirstreactapp-bydaniel.netlify.app/">
                 <button className={`h-14 w-24  border  rounded-xl font-semibold 
                              ${invScroll ?'text-gray-800 border-gray-900':'border-gray-50 text-gray-50 '}`}>Sign in</button>
               </Link>
@@ -157,7 +157,7 @@ const NavInvest = ({ invScroll }) => {
               </div>
         </div> 
         <div className='lg:hidden mt-10 flex flex-col w-[90%] mx-auto'>
-              <Link href="/">
+              <Link href="https://myfirstreactapp-bydaniel.netlify.app/">
                 <button className='h-14 w-[100%]  border border-gray-900 rounded-xl font-semibold text-gray-800'>Sign in</button>
               </Link>
               <Link href="/">
