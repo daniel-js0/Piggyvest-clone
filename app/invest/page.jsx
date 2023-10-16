@@ -6,9 +6,12 @@ import NavInvest from "../compnents/NavInvest";
 import Button from "../compnents/Button";
 import Logo from './farm.png'
 import Logosmall from './farm-sm.png'
+import SlideInText from "../compnents/SlideInText";
 
 const Invest = () => {
                 const [invScroll, setinvScroll ] = useState(false);
+                const [isVisible, setIsVisible] = useState(false);
+
 
                 useEffect(() => {
                   const handleScroll = () => {
@@ -25,9 +28,17 @@ const Invest = () => {
 
                   window.addEventListener('scroll', handleScroll);
 
+                  window.addEventListener('scroll', handleScroll);
+
+                  const timeout = setTimeout(() => {
+                    setIsVisible(true);
+                  }, 400); 
+              
                   return () => {
+                    clearTimeout(timeout)
                     window.removeEventListener('scroll', handleScroll);
                   };
+  
                 }, []);
 
               
@@ -40,19 +51,25 @@ const Invest = () => {
             <div  className={`mt-16 w-[100%]  min-[1023px]:h-[41rem]  h-[60rem] md:h-[65rem] bg-violet-700  relative overflow-hidden `}>
                   <div className="min-[1023px]:pt-48 pt-32">
                       <h1 className={`text-center text-5xl font-bold px-6 text-gray-100 
-                             min-[1023px]:text-5xl min-[1023px]:text-start xl:px-24 min-[1023px]:px-10`}>Invest on the go</h1>
-                      <p className='h-12 w-44 mx-auto mt-6 rounded-full bg-slate-200 py-3 px-3 lg:px-5 font-semibold xl:ml-24 min-[1023px]:ml-10 text-violet-700'>Up to 35% returns</p>
-                      <p className={`text-center text-xl mt-5 px-6 md:px-48 text-gray-300
-                            min-[1023px]:text-start xl:px-24 min-[1023px]:px-10  min-[1023px]:text-xl min-[1023px]:mt-8`} >Invest securely and confidently on the go.<br className="max-[1023px]:hidden"/> Up to 25% returns, 6-12 month duration.</p>
+                             min-[1023px]:text-5xl min-[1023px]:text-start xl:px-24 min-[1023px]:px-10`}>
+                               
+                               <SlideInText text="Invest on the go"/> 
+                              
+                               </h1>
+                      <p className={`h-12 w-44 mx-auto mt-6 rounded-full bg-slate-200 py-3 px-3 lg:px-5 font-semibold xl:ml-24 min-[1023px]:ml-10 text-violet-700
+                                  delay-150 duration-300 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} `}>Up to 35% returns </p>
+                      <p className={`text-center text-xl mt-5 px-6 md:px-48 text-gray-300 min-[1023px]:text-start xl:px-24 min-[1023px]:px-10  min-[1023px]:text-xl min-[1023px]:mt-
+                              delay-100 duration-500 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} `} >Invest securely and confidently on the go.<br className="max-[1023px]:hidden"/> Up to 25% returns, 6-12 month duration.</p>
                   </div>
                  
                   <div  className={`absolute w-[100%] h-[45%] md:h-[50%] max-[281px]:h-[40%]  min-[1023px]:h-[80%] xl:h-[88%] flex justify-center  min-[1023px]:justify-end  bottom-0`}>
-                    <Image width={310} height={208} quality={100} alt="PiggyVest"  className=" h-[100%] w-[80%] md:w-[53%] min-[1023px]:w-[38%] min-[1023px]:mr-10 xl:mr-24 xl:w-[33%]" src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_invest_67e86f3edf_761a6d7c25/i_Phone_14_invest_67e86f3edf_761a6d7c25.png"/>
+                    <Image width={310} height={208} quality={100} alt="PiggyVest"  className={`h-[100%] w-[80%] md:w-[53%] min-[1023px]:w-[38%] min-[1023px]:mr-10 xl:mr-24 xl:w-[33%]  
+                       delay-75 duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'} `} src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/i_Phone_14_invest_67e86f3edf_761a6d7c25/i_Phone_14_invest_67e86f3edf_761a6d7c25.png"/>
                   </div>
             </div>  
 
             <div className="w-[100%] xl:w-[30%] min-[1023px]:w-[40%]  h-36 absolute max-[281px]:bottom-[39%] bottom-[45%] md:bottom-[55%]  lg:bottom-[17%] min-[1023px]:ml-2 xl:ml-16 "> 
-               <Button />
+               <Button isVisible={isVisible} />
             </div>
          </div>
 

@@ -8,6 +8,7 @@ const Navbar = ({scroll, setShowStory, showStory,  click, handleClick, clickfaq,
                const [save, setSave] = useState(false);
                const [resource, setResource] = useState(false);
                const [offcanvas, setOffcanvas] = useState()
+              
 
                function handleHover(){  setSave(true);}
                function handleHover2(){ setSave(false);}
@@ -53,39 +54,39 @@ const Navbar = ({scroll, setShowStory, showStory,  click, handleClick, clickfaq,
 
          {/* Hover menu  */}
         {save && (<div onMouseEnter={handleHover} onMouseLeave={handleHover2} className=' absolute top-14 start-[21%] shadow-2xl w-[34%] bg-white h-60 rounded-2xl grid grid-cols-2'>
-                <div className='flex mt-5 ml-8'>
+                <div className='flex mt-5 ml-8 cursor-pointer'>
                     <Image width={100} height={100} quality={100} alt="PiggyVest" className='h-10 w-10 mt-1' src="https://storage.googleapis.com/new-abeg-avatar-dev/piggyvest-cms-staging/piggybank_icon_bd14f39497/piggybank_icon_bd14f39497.png"/>
                     <div className='ml-1.5'>
-                      <h3 className='font-bold text-gray-900'>Piggybank</h3>
+                      <h3 className='font-bold text-gray-900 hover:text-blue-600'>Piggybank</h3>
                       <p className=' text-sm italic text-gray-600 mt-0.5'>Automated Savings</p>
                     </div>
                 </div>
 
-                <div className='flex mt-5 ml-2'>
+                <div className='flex mt-5 ml-2 cursor-pointer'>
                     <Image width={100} height={100} quality={100} alt="PiggyVest" className='h-10 w-10 mt-1' src="https://storage.googleapis.com/new-abeg-avatar-dev/piggyvest-cms-staging/safelock_icon_7595628576/safelock_icon_7595628576.png" /> 
                     <div className='ml-1.5'>
-                      <h3 className='font-bold text-gray-900'>Safelock</h3>
+                      <h3 className='font-bold text-gray-900 hover:text-sky-600'>Safelock</h3>
                       <p className=' text-sm italic text-gray-600 mt-0.5'>Fixed Savings</p>
                     </div>
                 </div>
 
-                <div className='flex ml-8'>
+                <div className='flex ml-8 cursor-pointer'>
                     <Image width={100} height={100} quality={100} alt="PiggyVest" className='h-10 w-10 mt-1'src="https://storage.googleapis.com/new-abeg-avatar-dev/piggyvest-cms-staging/targets_icon_a382a2df4f/targets_icon_a382a2df4f.png" /> 
                     <div className='ml-1.5'>
-                      <h3 className='font-bold text-gray-900'>Target Savings</h3>
+                      <h3 className='font-bold text-gray-900 hover:text-green-600'>Target Savings</h3>
                       <p className=' text-sm italic text-gray-600 mt-0.5'>Goal-oriented Savings</p>
                     </div>
                 </div>
 
-                <div className='flex'>
+                <div className='flex cursor-pointer'>
                     <Image width={100} height={100} quality={100} alt="PiggyVest" className='h-10 w-10 mt-1 ml-2' src="https://storage.googleapis.com/new-abeg-avatar-dev/piggyvest-cms-staging/flex_naira_icon_1c37272848/flex_naira_icon_1c37272848.png" />
                     <div className='ml-1.5'>
-                      <h3 className='font-bold text-gray-900'>Flex Naira</h3>
+                      <h3 className='font-bold text-gray-900 hover:text-pink-600'>Flex Naira</h3>
                       <p className=' text-sm italic text-gray-600 mt-0.5'>Flexible Savings</p>
                     </div>
                 </div>
 
-                <div className='flex ml-8'>
+                <div className='flex ml-8 cursor-pointer'>
                     <Image width={100} height={100} quality={100} alt="PiggyVest" className='h-10 w-10 mt-1' src="https://storage.googleapis.com/new-abeg-avatar-dev/piggyvest-cms-staging/flex_dollar_icon_b180813700/flex_dollar_icon_b180813700.png"/>
                     <div className='ml-1.5'>
                       <h3 className='font-bold text-gray-900'>Flex Dollar</h3>
@@ -133,9 +134,9 @@ const Navbar = ({scroll, setShowStory, showStory,  click, handleClick, clickfaq,
 
 
         {/*Mobile View Offcanvas  */}
-        {!offcanvas && (<div onClick={handleOffcanvas} className='flex flex-col lg:hidden -mt-0.5 mr-5' >
+        {!offcanvas && (<div onClick={handleOffcanvas} className='flex flex-col lg:hidden -mt-0.5 mr-5 ' >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"
-                className="h-12 w-10 mt-3 text-gray-800 "        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
+                className={`h-12 w-10 mt-3 text-gray-800 delay-100 duration-500`}        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"
                 className="h-12 w-10 -mt-10 text-gray-800"        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"
@@ -144,7 +145,8 @@ const Navbar = ({scroll, setShowStory, showStory,  click, handleClick, clickfaq,
         
         {offcanvas && (<div onClick={handleOffcanvas} className='flex flex-col lg:hidden -mt-0.5 mr-5'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"
-                className="h-12 w-10 mt-3 pt-2 text-gray-800 -rotate-45"        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
+                className={`h-12 w-10 mt-3 pt-2 text-gray-800
+                 ${offcanvas ? '-rotate-45 delay-700 duration-[3000ms]': 'rotate-0'}`}       >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"
                 className="h-12 w-10 -mt-10 pb-2 text-gray-800 rotate-45"        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
         </div>)}

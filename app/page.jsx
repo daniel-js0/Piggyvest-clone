@@ -3,11 +3,14 @@ import { useState, useEffect } from "react"
 import Navbar from "./compnents/Navbar";
 import YouTube from 'react-youtube';
 import Image from "next/image";
+import SlideInText from "./compnents/SlideInText";
 
 
 export default function Home() {
               const [hover, setHover] = useState("");
               const [scroll, setScroll ] = useState(false);
+              const [isVisible, setIsVisible] = useState(false);
+
            
               
               function handleHover(tab){ setHover(tab); }
@@ -27,11 +30,18 @@ export default function Home() {
                 };
             
                 window.addEventListener('scroll', handleScroll);
+
+                const timeout = setTimeout(() => {
+                  setIsVisible(true);
+                }, 400);
             
                 return () => {
+                  clearTimeout(timeout)
                   window.removeEventListener('scroll', handleScroll);
                 };
-              }, []);
+
+                
+              }, []); 
 
               const opts = {
                 height: '390',
@@ -53,19 +63,20 @@ export default function Home() {
        <div className='mt-52 min-[1023px]:flex '>
            <div className='w-screen md:w-[70%] min-[1023px]:w-[39%] md:mx-auto '>
                <h1 className='text-center px-2 text-5xl font-bold 
-               text-gray-800 min-[1023px]:text-start min-[1023px]:px-8'>The Better Way to Save & Invest</h1>
-               <h4 className='text-center px-2  mt-7 leading-loose 
-               text-gray-500 min-[1023px]:text-start min-[1023px]:px-8'>Piggyvest helps over 4 million customers achieve their financial goals by helping them save and invest with ease</h4>
+               text-gray-800 min-[1023px]:text-start min-[1023px]:px-8'>
+                <SlideInText text="The Better Way to Save & Invest"/></h1>
+               <h4 className={`text-center px-2  mt-7 leading-loose text-gray-500 min-[1023px]:text-start min-[1023px]:px-8 
+               delay-100 duration-500 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} `}>Piggyvest helps over 4 million customers achieve their financial goals by helping them save and invest with ease</h4>
                
                <div className="flex justify-center mt-7 w-[90%]  h-20  mx-auto 
                           min-[1023px]:justify-start min-[1023px]:px-2">
-                  <button className="flex my-auto bg-gray-800 h-14 w-44 rounded-xl
-                          hover:bg-black hover:-translate-y-2 hover:delay-100 duration-700">
+                  <button className={`flex my-auto bg-gray-800 h-14 w-44 rounded-xl hover:bg-black hover:-translate-y-2 hover:delay-100 duration-700
+                           delay-100 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} `}>
                       <Image width={18} height={22} quality={100} className="my-auto ml-3" src="https://storage.googleapis.com/new-abeg-avatar-dev/piggyvest-cms-staging/white_Apple_Logo_768cf7ce21/white_Apple_Logo_768cf7ce21.svg" alt="download-apple" />
                       <p className="my-auto ml-2 font-bold text-gray-200">Get on Iphone</p>
                   </button>
-                  <button className="flex my-auto  ml-4 bg-gray-800 h-14 w-48 rounded-xl
-                           hover:bg-black hover:-translate-y-2 hover:delay-100 duration-700">
+                  <button className={`flex my-auto  ml-4 bg-gray-800 h-14 w-48 rounded-xl hover:bg-black hover:-translate-y-2 hover:delay-100 duration-700 
+                             delay-100  ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'}  `}>
                       <Image width={24} height={24} quality={100} className="my-auto ml-3"  src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/google_icon_9867fc9be6/google_icon_9867fc9be6.svg" alt="download-google" />
                       <p className="my-auto ml-1 font-bold  text-gray-200" >Get on Android</p>
                   </button>  
@@ -73,11 +84,12 @@ export default function Home() {
            </div>
  
            <div className="w-[94%] mx-auto sm:mx-auto sm:w-[60%] lg:w-[45%] lg:scale-110 md:mx-auto mt-14 relative
-                          min-[1023px]:-mt-20 xl:animate-bounce-slow">
-              <div className="lg:w-[75%] mt-5 mx-auto md:h-[29rem] h-[22.5rem] w-[85%] bg-no-repeat overflow-hidden bg-center rounded-[1.75rem] " >
+                          min-[1023px]:-mt-20 xl:animate-bounce-slow overflow-visible">
+              <div className={`lg:w-[75%] mt-5 mx-auto md:h-[29rem] h-[22.5rem] w-[85%] bg-no-repeat bg-center  
+              delay-75 duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`} >
                 <Image
                  src="/background.png"
-                 className="w-[100%] h-[100%]"
+                 className="w-[100%] h-[100%] rounded-[1.75rem]"
                  alt="NDPR audit" 
                  width={320} 
                  height={240}
@@ -86,11 +98,21 @@ export default function Home() {
                    />
                 <div>
                
-                   <Image src="/card1.png" width={130} height={100} quality={100} className="w-36 h-10 absolute start-1.5 top-24  rounded-xl" alt="card-img" placeholder="empty" />
-                   <Image src="/card2.png" width={130} height={100} quality={100} className="w-36 h-14 absolute end-4 top-16 rounded-xl" alt="card-img"  placeholder="empty"   />
-                   <Image src="/card3.png" width={130} height={100} quality={100} className="w-36 h-14 absolute start-2 bottom-24 rounded-xl" alt="card-img"  />
-                   <Image src="/card4.png" width={130} height={100} quality={100} className="w-36 h-10 absolute end-4 bottom-32 rounded-xl" alt="card-img" />
-                   <Image src="/card5.png" width={130} height={100} quality={100} className="w-36 h-12 absolute -bottom-1 sm:-bottom-2 max-[361px]:bottom-9 start-1/3 rounded-xl" alt="card-img" />
+                   <Image src="/card1.png" width={130} height={100} quality={100} alt="card-img" placeholder="empty"
+                   className={`w-36 h-10 absolute -start-6 top-24  rounded-xl transition-transform transform delay-100 duration-700 
+                     ${isVisible ? '-translate-y-2 opacity-100' : ' translate-y-12 opacity-0'}`}  />
+                   <Image src="/card2.png" width={130} height={100} quality={100} alt="card-img"  placeholder="empty"
+                   className={`w-36 h-14 absolute -end-7 top-16 rounded-xl transition-transform transform delay-200 duration-700
+                     ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'}`} />
+                   <Image src="/card3.png" width={130} height={100} quality={100} alt="card-img" 
+                   className={`w-36 h-14 absolute -start-6 bottom-24 rounded-xl transition-transform transform delay-300 duration-700
+                     ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'}`} />
+                   <Image src="/card4.png" width={130} height={100} quality={100} alt="card-img"
+                   className={`w-36 h-10 absolute -end-7 bottom-32 rounded-xl transition-transform transform delay-500 duration-700
+                     ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} `}  />
+                   <Image src="/card5.png" width={130} height={100} quality={100} alt="card-img"
+                   className={`w-36 h-12 absolute -bottom-1 sm:-bottom-2 max-[361px]:bottom-9 start-1/3 rounded-xl transition-transform 
+                   transform delay-700 duration-[900ms]  ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-6 opacity-0'}  `}  />
                 </div> 
 
               </div> 

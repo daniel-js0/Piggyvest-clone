@@ -1,25 +1,56 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../compnents/Navbar'
 import ButtonLite from '../compnents/ButtonLite'
 import Image from "next/image";
+import SlideInText from '../compnents/SlideInText';
 
 
 const FaqPage = () => {
                 const [clickfaq, setClickfaq] = useState('faq');
+                const [scroll, setScroll ] = useState(false);
+                const [isVisible, setIsVisible] = useState(false);
+
+
 
                 const handleClickfaq = (e) => {
                 e.preventDefault();
                 setClickfaq('faq');
                 }
+
+                useEffect(() => {
+                  const handleScroll = () => {
+                    const scrollPosition = window.scrollY;
+              
+                    const threshold = 100; 
+              
+                    if (scrollPosition > threshold) {
+                      setScroll(true);
+                    } else {
+                      setScroll(false);
+                    }
+                  };
+                            
+                  const timeout = setTimeout(() => {
+                     setIsVisible(true);
+                   }, 400);
+               
+                   return () => {
+                     clearTimeout(timeout)
+                     window.removeEventListener('scroll', handleScroll);
+                   };
+   
+                }, []);
+  
   return (
      <main>
-        <Navbar clickfaq={clickfaq} handleClickfaq={handleClickfaq}/>
+        <Navbar clickfaq={clickfaq} handleClickfaq={handleClickfaq} scroll={scroll}/>
         <div className='mt-36 w-screen h-36 mb-36'>
-            <h1 className='text-center text-4xl lg:text-5xl font-bold text-gray-800 lg:pt-20'>Frequently Asked Questions (FAQs)</h1>
+            <h1 className='text-center text-4xl lg:text-5xl font-bold text-gray-800 lg:pt-20'> <SlideInText text="Frequently Asked Questions (FAQs)"/></h1>
             <div className='w-[80%] md:w-[90%] lg:w-[85%] xl:w-[60%] h-16 bg-slate-00 mx-auto mt-8'>
              <input type="text"
-             className='w-[100%] h-[90%] border border-gray-500 rounded-xl placeholder:text-xl placeholder:px-5 placeholder:text-gray-300'
+             className={`w-[100%] h-[90%] border border-gray-500 rounded-xl placeholder:text-xl placeholder:px-5 placeholder:text-gray-300
+                   duration-500       delay-100 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'}`}
              placeholder='search for a question...'
              />
              </div>
