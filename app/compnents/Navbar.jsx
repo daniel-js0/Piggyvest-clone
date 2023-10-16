@@ -43,10 +43,10 @@ const Navbar = ({scroll, setShowStory, showStory,  click, handleClick, clickfaq,
               </div>
         </div> 
         <div className='lg:flex hidden mt-4 md:mr-[4%] xl:mr-[8%]'>
-              <Link href="https://myfirstreactapp-bydaniel.netlify.app/"> 
+              <Link href="https://loginpage-py.netlify.app/"> 
                 <button className='h-14 w-24  border border-gray-900 rounded-xl font-semibold text-gray-800'>Sign in</button>
               </Link>
-              <Link href="/">
+              <Link href="https://register-py.netlify.app/">
                 <button className='h-14 w-52 bg-gray-800 rounded-xl ml-2 font-semibold text-white tracking-normal'>Create free account</button>
               </Link>
         </div>
@@ -160,10 +160,10 @@ const Navbar = ({scroll, setShowStory, showStory,  click, handleClick, clickfaq,
               </div>
         </div> 
         <div className='lg:hidden mt-10 flex flex-col w-[90%] mx-auto'>
-              <Link href="https://myfirstreactapp-bydaniel.netlify.app/">
+              <Link href="https://loginpage-py.netlify.app/">
                 <button className='h-14 w-[100%]  border border-gray-900 rounded-xl font-semibold text-gray-800'>Sign in</button>
               </Link>
-              <Link href="/">
+              <Link href="https://register-py.netlify.app/">
                 <button className='h-14 w-[100%] bg-gray-800 rounded-xl mt-8 font-semibold text-white tracking-normal'>Create free account</button>
               </Link>
         </div>  
