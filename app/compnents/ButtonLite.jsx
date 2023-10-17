@@ -14,7 +14,7 @@ const ButtonLite = ({  }) => {
             <button className="flex my-auto bg-gray-50  ml-4 bg-gray-60 h-14 w-48 rounded-xl border border-gray-300
                 hover:-translate-y-2 hover:delay-100 duration-700">
                 <Image width={24} height={24} quality={100}  className="my-auto ml-3.5 md:ml-5 lg:ml-3"  src="https://storage.googleapis.com/piggyvestwebsite/piggywebsite2020/google_icon_9867fc9be6/google_icon_9867fc9be6.svg" alt="download-google" />
-                <p className="my-auto ml-1 font-bold  text-gray-800" >Get on Android</p>
+                <p className="my-auto ml-1.5 font-bold  text-gray-800" >Get on Android</p>
             </button>  
       </div>
 

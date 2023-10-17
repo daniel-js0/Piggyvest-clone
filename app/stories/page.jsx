@@ -102,13 +102,6 @@ const Stories = () => {
            </div>
         </div>
 
-
-
-
-       
-        
-      
-
     </main>
   )
 }
